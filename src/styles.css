@@ -1,0 +1,153 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+
+  /* Professional / Industrial palette (new theme) */
+  --pro-bg: #2b2d31;
+  --pro-dark: #1f2024;
+  --pro-surface: #3a3c41;
+  --pro-gold: #ff6b4a;          /* coral accent (replaces gold) */
+  --pro-gold-light: #ff8568;
+  --pro-slate: #5a6068;
+  --pro-text: #f7f7f5;
+  --pro-body: #d8dadd;
+  --pro-muted: #8a8f96;
+  --pro-card: #34363b;
+  --pro-border: rgba(216, 218, 221, 0.10);
+}
+
+/* Light/Professional theme scope (used on /light and the right half of /) */
+.light-mode {
+  --lp-bg: #f7f7f5;
+  --lp-ink: #2b2d31;
+  --lp-muted: #5a6068;
+  --lp-rule: #d8dadd;
+  --lp-accent: #ff6b4a;
+  background: var(--lp-bg);
+  color: var(--lp-ink);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
+
+/* Entry screen rain animation */
+@keyframes batman-rain-fall {
+  from { transform: translateY(-30px); }
+  to { transform: translateY(110vh); }
+}
+@keyframes batman-signal-pulse {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.12; }
+}
+@keyframes pro-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes pro-float-rot {
+  0%, 100% { transform: rotate(45deg) translateY(0px); }
+  50% { transform: rotate(45deg) translateY(-10px); }
+}
+@keyframes pro-pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+/* Landing page bat flight + symbol pulse */
+@keyframes landing-bat-fly {
+  0%   { transform: translateX(0) translateY(0) scaleX(1); }
+  25%  { transform: translateX(30vw) translateY(-22px) scaleX(0.85); }
+  50%  { transform: translateX(60vw) translateY(18px) scaleX(1); }
+  75%  { transform: translateX(90vw) translateY(-14px) scaleX(0.85); }
+  100% { transform: translateX(120vw) translateY(0) scaleX(1); }
+}
+@keyframes landing-symbol-pulse {
+  0%, 100% { box-shadow: 0 0 32px rgba(245,197,24,0.45), inset 0 0 16px rgba(245,197,24,0.18); }
+  50%      { box-shadow: 0 0 48px rgba(245,197,24,0.7),  inset 0 0 22px rgba(245,197,24,0.28); }
+}
+
+/* Realistic lightning: multi-flicker flash mimicking real strike (bright, dim, bright, fade) */
+@keyframes lightning-bolt {
+  0%   { opacity: 0; }
+  2%   { opacity: 1; }
+  5%   { opacity: 0.2; }
+  7%   { opacity: 0.95; }
+  10%  { opacity: 0.4; }
+  13%  { opacity: 0.85; }
+  18%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes lightning-flash {
+  0%   { opacity: 0; }
+  2%   { opacity: 0.55; }
+  5%   { opacity: 0.08; }
+  7%   { opacity: 0.45; }
+  10%  { opacity: 0.05; }
+  13%  { opacity: 0.35; }
+  18%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Light side: marquee + magnetic cursor */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
