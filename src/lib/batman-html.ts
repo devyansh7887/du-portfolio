@@ -1671,7 +1671,7 @@ export const batmanHtml = `<!doctype html>
               </div>
               <div class="stats" data-stats>
                 <div class="stat">
-                  <strong data-count="250" data-suffix="+">0</strong
+                  <strong data-count="500" data-suffix="+">0</strong
                   ><span>Algo Solved</span>
                 </div>
                 <div class="stat">
@@ -2030,7 +2030,7 @@ export const batmanHtml = `<!doctype html>
             </article>
             <article class="case-banner reveal">
               <h3>
-                <strong>250+ DSA Problems Solved</strong> - LeetCode +
+                <strong>500+ DSA Problems Solved</strong> - LeetCode +
                 GeeksforGeeks
               </h3>
               <p>Problem-solving accuracy improved 35% within one year</p>

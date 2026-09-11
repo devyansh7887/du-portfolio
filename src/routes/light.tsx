@@ -672,7 +672,7 @@ const EDUCATION = [
     school: "Bhaktivedanta Gurukula & International School, Vrindavan",
     degree: "Secondary (10th)",
     when: "2019",
-    note: "86% · CBSE · Foundation in math, science, and the classics.",
+    note: "86% · ICSE · Foundation in math, science, and the classics.",
   },
 ];
 
@@ -1541,11 +1541,11 @@ const EXPERIENCE = [
 
 const ACHIEVEMENTS = [
   { metric: "1400+", label: "Codeforces - Specialist", sub: "Achieved 1400+ rating in Codeforces Competetive Programming." },
-  { metric: "250+", label: "DSA Problems Solved", sub: "LeetCode · GeeksforGeeks" },
+  { metric: "500+", label: "DSA Problems Solved", sub: "LeetCode · GeeksforGeeks" },
   { metric: "96.7%", label: "NCAT 2025 — Engineering", sub: "Top engineers nationwide" },
   { metric: "86.5", label: "eLitmus pH Test Percentile", sub: "Quant · Logic · Problem-solving" },
   { metric: "+35%", label: "Problem-solving accuracy gain", sub: "Within one year of practice" },
-  { metric: "3", label: "End-to-end systems shipped", sub: "AI Resume · Visualizer · Swoley-Fit" },
+  { metric: "5", label: "End-to-end systems shipped", sub: "Groundwork · AI Resume · Visualizer · Swoley-Fit" },
   { metric: "4", label: "Industry Certifications", sub: "Oracle · AWS · IBM" },
 ];
 
