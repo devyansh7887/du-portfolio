@@ -1165,8 +1165,8 @@ const PROJECTS = [
       "Integrated Server-Sent Events (SSE) to stream the agent's thought process and tool invocations directly to the user interface in real-time.",
     ],
     stack: ["Next.js", "Python", "FastAPI", "React", "SSE", "LLMs"],
-    live: "#",
-    code: "#",
+    live: "https://devyanshupadhyay.vercel.app/",
+    code: "https://github.com/devyansh7887/groundwork",
     accent: "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
   },
   {

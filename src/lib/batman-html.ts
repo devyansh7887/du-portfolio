@@ -1850,11 +1850,11 @@ export const batmanHtml = `<!doctype html>
               </div>
               <div class="project-links">
                 <a
-                  href="#"
+                  href="https://github.com/devyansh7887/groundwork"
                   target="_blank"
                   rel="noreferrer"
                   >View on GitHub</a
-                ><a href="#">Request Demo</a>
+                ><a href="https://devyanshupadhyay.vercel.app/">Request Demo</a>
               </div>
             </article>
 
