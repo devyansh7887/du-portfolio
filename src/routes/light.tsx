@@ -1155,6 +1155,21 @@ function Skills() {
 
 const PROJECTS = [
   {
+    title: "Groundwork",
+    short: "Groundwork",
+    blurb:
+      "An autonomous AI tool that reads GitHub repositories and automatically generates working code patches for open issues—providing cited explanations of which files to change and why, completely avoiding architectural hallucinations.",
+    bullets: [
+      "Engineered a custom ReAct loop that iteratively explores codebases to deeply understand obscure architectural boundaries before ever writing a patch.",
+      "Achieved 100% precision and coverage in grounded accuracy benchmarks across 7 major open-source repositories.",
+      "Integrated Server-Sent Events (SSE) to stream the agent's thought process and tool invocations directly to the user interface in real-time.",
+    ],
+    stack: ["Next.js", "Python", "FastAPI", "React", "SSE", "LLMs"],
+    live: "#",
+    code: "#",
+    accent: "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+  },
+  {
     title: "AI Resume Analyser",
     short: "AI Resume Analyser",
     blurb:

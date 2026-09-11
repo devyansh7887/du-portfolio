@@ -1675,7 +1675,7 @@ export const batmanHtml = `<!doctype html>
                   ><span>Algo Solved</span>
                 </div>
                 <div class="stat">
-                  <strong data-count="3">0</strong><span>Projects</span>
+                  <strong data-count="4">0</strong><span>Projects</span>
                 </div>
                 <div class="stat">
                   <strong data-count="4">0</strong><span>Certifications</span>
@@ -1828,6 +1828,36 @@ export const batmanHtml = `<!doctype html>
             loading="lazy"
           />
           <div class="journal-stack">
+            <article class="journal-page reveal" style="--tilt: 1.5deg">
+              <div class="case-top">
+                <span>CASE #000 - CLASSIFIED</span><span>PRIME TARGET [OK]</span>
+              </div>
+              <h3>Groundwork</h3>
+              <div class="project-meta">
+                <span class="paper-pill">Next.js</span
+                ><span class="paper-pill">Python</span
+                ><span class="paper-pill">FastAPI</span
+                ><span class="paper-pill">ReAct Loop</span
+                ><span class="paper-pill">LLMs</span>
+              </div>
+              <blockquote>
+                An autonomous AI tool that reads GitHub repositories and automatically generates working code patches for open issues—providing cited explanations of which files to change and why, completely avoiding architectural hallucinations. I made the machine patch itself.
+              </blockquote>
+              <div class="project-meta">
+                <span class="paper-pill">100% Benchmark Precision</span
+                ><span class="paper-pill">Real-time Agent Streaming</span
+                ><span class="paper-pill">Deterministic Cartography</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  >View on GitHub</a
+                ><a href="#">Request Demo</a>
+              </div>
+            </article>
+
             <article class="journal-page reveal" style="--tilt: -1.2deg">
               <div class="case-top">
                 <span>CASE #001 - CLASSIFIED</span><span>SOLVED [OK]</span>
